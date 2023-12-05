@@ -3,9 +3,6 @@ pipeline {
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
-  tools {
-    maven 'M3'
-  }
   stages {
     stage('Scan') {
       steps {
