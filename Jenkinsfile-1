@@ -14,7 +14,7 @@ pipeline {
   stages {
     stage('Scan') {
       steps {
-        withSonarQubeEnv(installationName: 'sonar-server') { 
+        withSonarQubeEnv() { 
           sh 'mvn clean package sonar:sonar -Dsonar.host.url=http://vagrant_sonarqube_1:9000'
         }
       }
